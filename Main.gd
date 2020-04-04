@@ -19,7 +19,16 @@ func _process(delta):
 	if Input.is_action_just_pressed("i"):
 		target = monster_container.get_child(randi() % monster_container.get_child_count())
 		print(target.name)
+	if Input.is_action_pressed("ui_right"):
+		$Spatial.rotate_y(10 * delta)
+	if Input.is_action_pressed("ui_left"):
+		$Spatial.rotate_y(-10 * delta)
+	if Input.is_action_pressed("ui_down"):
+		$Spatial.rotate_x(10 * delta)
+	if Input.is_action_pressed("ui_up"):
+		$Spatial.rotate_x(-10 * delta)
 	
+		
 
 
 

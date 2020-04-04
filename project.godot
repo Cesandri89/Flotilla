@@ -23,6 +23,11 @@ config/icon="res://icon.png"
 
 target_list="*res://target_list.gd"
 
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
+
 [input]
 
 space={

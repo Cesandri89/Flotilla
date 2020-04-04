@@ -16,9 +16,8 @@ func _ready():
 func _physics_process(delta):
 	var local_direction = global_direction.rotated(Vector3(0,1,0), rotation.y)	
 	if Input.is_action_just_pressed("space"):
-		
-		
 		var b = bullet_instance.instance()
+		b.set_target()
 		add_child(b)
 		#b.translation = get_translation()
 	if Input.is_action_pressed("a_key"):
