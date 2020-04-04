@@ -16,9 +16,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_action_just_pressed("i"):
-		target = monster_container.get_child(randi() % monster_container.get_child_count())
-		print(target.name)
+	#if Input.is_action_just_pressed("i"):
+	#	get_random_enemy()
+		
 	if Input.is_action_pressed("ui_right"):
 		$Spatial.rotate_y(10 * delta)
 	if Input.is_action_pressed("ui_left"):
@@ -28,8 +28,10 @@ func _process(delta):
 	if Input.is_action_pressed("ui_up"):
 		$Spatial.rotate_x(-10 * delta)
 	
-		
-
+func get_random_enemy():
+	target = monster_container.get_child(randi() % monster_container.get_child_count())
+	print(target.name)	
+	return target
 
 
 
